@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { api } from "./Main";
+import { api } from "./App";
 const JobsDashboard = async (profiles) => {
   const [Jobs, setJobs] = useState([]);
 

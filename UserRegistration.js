@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import "./UserRegistration.css";
-import { api } from "./Main";
+import { api } from "./App";
 function UserRegistration() {
   const [formData, setFormData] = useState({
     name: "",

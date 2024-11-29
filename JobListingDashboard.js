@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { api } from "./Main";
+import { api } from "./App";
 const JobListingDashboard = () => {
   const [jobs, setJobs] = useState([]);
   const navigate = useNavigate();

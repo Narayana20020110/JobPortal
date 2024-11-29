@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { api } from "./Main";
-import {useLocation} from "react-router-dom";
+import { api } from "./App";
+import { useLocation } from "react-router-dom";
 import JobsDashboard from "./JobsDashboard";
 const MatchedProfiles = () => {
   const [profiles, setProfiles] = useState([]);
- const location = useLocation();
+  const location = useLocation();
   useEffect(() => {
-    const {jobs} = location.state.Jobs;
+    const { jobs } = location.state.Jobs;
     // Fetch matched profiles data from backend
     setInterval(() => {
       Object.keys(jobs).map((job) => {
@@ -14,7 +14,6 @@ const MatchedProfiles = () => {
           .then((response) => response.json())
           .then((data) => setProfiles(data));
       });
-     
     }, 5000);
   }, []);
 

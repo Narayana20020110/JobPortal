@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./CompanyRegistration.css";
-import axios from "axios";
-import { api } from "./Main";
+
+import { api } from "./App";
 const CompanyRegistration = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({

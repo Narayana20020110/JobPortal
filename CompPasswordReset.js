@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./PasswordReset.css";
-import {api} from "./Main";
+import { api } from "./App";
 function CompPasswordReset() {
   const [passwords, setPasswords] = useState({
     newPassword: "",
@@ -18,12 +18,17 @@ function CompPasswordReset() {
       return;
     }
     try {
-    const res =  await fetch(`${api}/company/password-reset`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
-        email: location.state.email,
-        ...passwords.confirmPassword,
-      }),});
-      if(res.status==200){
-      navigate("/CompanyLogin");}
+      const res = await fetch(`${api}/company/password-reset`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: location.state.email,
+          ...passwords.confirmPassword,
+        }),
+      });
+      if (res.status == 200) {
+        navigate("/CompanyLogin");
+      }
     } catch (error) {
       console.error("Password reset failed:", error);
     }

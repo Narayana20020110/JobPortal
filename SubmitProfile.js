@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import {api} from "./Main";
+import { api } from "./App";
 const SubmitProfile = () => {
   const location = useLocation();
   const jobId = location.state.jobId;

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
+
 import { useNavigate, Link } from "react-router-dom";
 import "./CompanyLogin.css";
-
+import { api } from "./App";
 function CompanyLogin() {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ function CompanyLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch("/api/company/login", {
+      await fetch(`${api}/company/login`, {
         method: "POST",
         header: { "Content-Type": "application/json" },
         body: JSON.stringify(credentials),
@@ -46,7 +46,7 @@ function CompanyLogin() {
         />
         <button type="submit">Login</button>
       </form>
-     
+
       <Link to="/CompForgotPassword">Forgot Password?</Link>
     </div>
   );

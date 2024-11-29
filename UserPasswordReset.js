@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./PasswordReset.css";
-import { api } from "./Main";
+import { api } from "./App";
 function UserPasswordReset() {
   const [passwords, setPasswords] = useState({
     newPassword: "",
