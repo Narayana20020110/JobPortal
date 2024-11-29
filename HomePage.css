@@ -1,0 +1,53 @@
+/* styles.css */
+body {
+  margin: 0;
+    font-family: Arial, sans-serif;
+      display: flex;
+        justify-content: center;
+          align-items: center;
+            min-height: 100vh;
+              background-color: #f4f4f4;
+              }
+
+              div {
+                text-align: center;
+                  padding: 20px;
+                    background: white;
+                      border-radius: 8px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        }
+
+                        h1 {
+                          font-size: 2rem;
+                            margin-bottom: 20px;
+                              color: #333;
+                              }
+
+                              button {
+                                width: 80%;
+                                  max-width: 200px;
+                                    padding: 10px;
+                                      margin: 10px;
+                                        font-size: 1rem;
+                                          color: white;
+                                            background-color: #007bff;
+                                              border: none;
+                                                border-radius: 5px;
+                                                  cursor: pointer;
+                                                    transition: background-color 0.3s ease;
+                                                    }
+
+                                                    button:hover {
+                                                      background-color: #0056b3;
+                                                      }
+
+                                                      @media (max-width: 768px) {
+                                                        h1 {
+                                                            font-size: 1.5rem;
+                                                              }
+
+                                                                button {
+                                                                    width: 90%;
+                                                                        font-size: 0.9rem;
+                                                                          }
+                                                                          }
