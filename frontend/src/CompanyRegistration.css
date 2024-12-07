@@ -1,0 +1,77 @@
+.company-registration-container {
+      width: 100%;
+        max-width: 600px;
+          margin: 50px auto;
+            padding: 30px;
+              background: #fff;
+                border: 1px solid #ddd;
+                  border-radius: 10px;
+                    text-align: center;
+                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                      }
+
+                      .company-registration-container h2 {
+                        font-size: 2rem;
+                          font-weight: bold;
+                            margin-bottom: 15px;
+                            }
+
+                            .company-registration-container p {
+                              margin-bottom: 20px;
+                              }
+
+                              .company-registration-container form {
+                                display: flex;
+                                  flex-direction: column;
+                                  }
+
+                                  .company-registration-container input,
+                                  .company-registration-container select,
+                                  .company-registration-container textarea {
+                                    margin-bottom: 15px;
+                                      padding: 10px;
+                                        font-size: 1rem;
+                                          border: 1px solid #ddd;
+                                            border-radius: 5px;
+                                              width: 100%;
+                                              }
+
+                                              .company-registration-container textarea {
+                                                resize: none;
+                                                  height: 100px;
+                                                  }
+
+                                                  .company-registration-container label {
+                                                    font-size: 0.9rem;
+                                                      display: flex;
+                                                        align-items: center;
+                                                          margin-bottom: 20px;
+                                                          }
+
+                                                          .company-registration-container label span {
+                                                            margin-left: 10px;
+                                                            }
+
+                                                            .company-registration-container button {
+                                                              padding: 10px;
+                                                                font-size: 1rem;
+                                                                  color: #fff;
+                                                                    background-color: #000;
+                                                                      border: none;
+                                                                        border-radius: 5px;
+                                                                          cursor: pointer;
+                                                                          }
+
+                                                                          .company-registration-container button:hover {
+                                                                            background-color: #444;
+                                                                            }
+
+                                                                            .company-registration-container a {
+                                                                              color: #000;
+                                                                                text-decoration: underline;
+                                                                                  font-size: 0.9rem;
+                                                                                  }
+
+                                                                                  .company-registration-container a:hover {
+                                                                                    text-decoration: none;
+                                                                                    }
