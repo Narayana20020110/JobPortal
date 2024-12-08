@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Narayana2020110.github.io/static/css/main.1fafbb52.css",
+    "main.js": "/Narayana2020110.github.io/static/js/main.edb4817d.js",
+    "index.html": "/Narayana2020110.github.io/index.html",
+    "main.1fafbb52.css.map": "/Narayana2020110.github.io/static/css/main.1fafbb52.css.map",
+    "main.edb4817d.js.map": "/Narayana2020110.github.io/static/js/main.edb4817d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1fafbb52.css",
+    "static/js/main.edb4817d.js"
+  ]
+}
