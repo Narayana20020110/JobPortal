@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState, useContext } from "react";
+
+
 import { useNavigate, Link } from "react-router-dom";
 import "./UserLogin.css";
 import { api } from "./App";
@@ -9,15 +10,17 @@ function UserLogin() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     try {
       const res = await fetch(`${api}/user/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(credentials),
       });
-      if (res.status == 200) {
+     
+    if (res.status == 200) {
         navigate("/JobListingDashboard");
-      }
+     }
     } catch (error) {
       console.error("Login failed:", error);
     }
@@ -26,7 +29,7 @@ function UserLogin() {
   return (
     <div className="login-container">
       <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={ handleSubmit }>
         <input
           type="email"
           placeholder="Email"

@@ -7,9 +7,9 @@ const SubmitProfile = () => {
   const navigate = useNavigate();
 
   const [profile, setProfile] = useState({
-    name: "",
-    skills: "",
-    experience: "",
+    userName: "",
+    resume: "",
+    email: "",
   });
 
   const handleChange = (e) => {
@@ -34,23 +34,23 @@ const SubmitProfile = () => {
       <h1>Submit Profile</h1>
       <input
         type="text"
-        name="name"
-        placeholder="Name"
-        value={profile.name}
+        name="userName"
+        placeholder="userNme"
+        value={profile.userName}
         onChange={handleChange}
       />
       <input
         type="text"
-        name="skills"
-        placeholder="Skills"
-        value={profile.skills}
+        name="resume"
+        placeholder="resume"
+        value={profile.resume}
         onChange={handleChange}
       />
       <input
-        type="number"
-        name="experience"
-        placeholder="Experience"
-        value={profile.experience}
+        type="email"
+        name="email"
+        placeholder="email"
+        value={profile.email}
         onChange={handleChange}
       />
       <button onClick={handleSubmit}>Submit</button>

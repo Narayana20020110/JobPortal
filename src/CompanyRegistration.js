@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+
+import { UserContext } from './userContext';
 import { useNavigate, Link } from "react-router-dom";
 import "./CompanyRegistration.css";
 
@@ -34,14 +36,16 @@ const CompanyRegistration = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      if (response.status === 200) {
-        const email = formData.email;
-        navigate("/JobsDashboard", { state: { email } });
-      }
+   //   if (response.status === 200) {
+     
+        setEmail(formData.email);
+        navigate("/JobsDashboard");
+    // } 
     } catch (error) {
       console.error("Registration failed:", error);
     }
   };
+  const { setEmail } = useContext(UserContext);
 
   return (
     <div className="company-registration-container">

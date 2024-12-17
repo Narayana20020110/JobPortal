@@ -125,7 +125,7 @@ console.log(newSubmission);
 // @access  Public
 app.get("/matched/:jobId", async (req, res) => {
   const {jobId} = req.params;
-  console.log("f", jobId);
+ 
   try {
     
 

@@ -8,13 +8,13 @@ const MatchedProfiles = () => {
   useEffect(() => {
     const { jobs } = location.state.Jobs;
     // Fetch matched profiles data from backend
-    setInterval(() => {
+    
       Object.keys(jobs).map((job) => {
-        fetch(`${api}/matched/${job.id}`)
+        fetch(`${api}/matched/${job._id}`)
           .then((response) => response.json())
           .then((data) => setProfiles(data));
       });
-    }, 5000);
+   
   }, []);
 
   return (

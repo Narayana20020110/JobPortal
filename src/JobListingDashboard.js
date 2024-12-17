@@ -9,9 +9,9 @@ const JobListingDashboard = () => {
     // Fetch jobs data from backend
     fetch(`${api}/jobs`)
       .then((response) => response.json())
-      .then((dat) => {
-        setJobs(dat.data);
-        console.log(typeof dat);
+      .then((data) => {
+        setJobs(data);
+        
       });
   }, []);
 
@@ -26,12 +26,12 @@ const JobListingDashboard = () => {
       <div>
         {jobs.map((job) => (
           <div
-            key={job.jobId}
+            key={job._id}
             style={{ border: "1px solid black", margin: "10px" }}
           >
             <h2>{job.jobTitle}</h2>
             <p>{job.description}</p>
-            <button onClick={() => handleApply(job.jobId)}>Apply</button>
+            <button onClick={() => handleApply(job._id)}>Apply</button>
           </div>
         ))}
       </div>

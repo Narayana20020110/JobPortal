@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState , useContext } from "react";
 
+import { UserContext } from './userContext';
 import { useNavigate, Link } from "react-router-dom";
 import "./CompanyLogin.css";
 import { api } from "./App";
@@ -10,18 +11,19 @@ function CompanyLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      
       await fetch(`${api}/company/login`, {
         method: "POST",
         header: { "Content-Type": "application/json" },
         body: JSON.stringify(credentials),
       });
-      const email = credentials.email;
-      navigate("/JobsDashboard", { state: { email } });
+      setEmail(credentials.email);
+      navigate("/JobsDashboard");
     } catch (error) {
       console.error("Login failed:", error);
     }
   };
-
+  const { setEmail } = useContext(UserContext);
   return (
     <div className="login-container">
       <h2>Login</h2>
